@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "monstereyes",
+  "version": "${version}",
+  "name": "MonsterEyes",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/monstereyes/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.land.monstereyes.client.MonstereyesDataGenerator"
+    ],
+    "client": [
+      "org.land.monstereyes.client.MonstereyesClient"
+    ],
+    "main": [
+      "org.land.monstereyes.Monstereyes"
+    ]
+  },
+  "mixins": [
+    "monstereyes.mixins.json",
+    {
+      "config": "monstereyes.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

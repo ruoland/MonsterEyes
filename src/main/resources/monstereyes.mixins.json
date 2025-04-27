@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.land.monstereyes.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ActiveTargetGoalMixin",
+    "LivingEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
