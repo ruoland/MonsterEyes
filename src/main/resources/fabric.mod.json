@@ -3,16 +3,13 @@
   "id": "monstereyes",
   "version": "${version}",
   "name": "MonsterEyes",
-  "description": "",
-  "authors": [],
+  "description": "Monsters only attack when enemies are within sight!",
+  "authors": ["landland"],
   "contact": {},
   "license": "All-Rights-Reserved",
   "icon": "assets/monstereyes/icon.png",
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "org.land.monstereyes.client.MonstereyesDataGenerator"
-    ],
     "client": [
       "org.land.monstereyes.client.MonstereyesClient"
     ],

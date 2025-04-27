@@ -31,7 +31,7 @@ public class Monstereyes implements ModInitializer {
         Vec3d targetEyePos = target.getEyePos();
 
 
-        Vec3d lookVector = mob.getRotationVector();
+        Vec3d lookVector = mob.getRotationVector(mob.getPitch(), mob.getHeadYaw());
 
         Vec3d targetDirection = targetEyePos.subtract(eyePos);
 

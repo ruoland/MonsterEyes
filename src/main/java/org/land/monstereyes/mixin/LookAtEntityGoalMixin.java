@@ -20,13 +20,15 @@ public abstract class LookAtEntityGoalMixin extends Goal {
 
     @Shadow @Nullable protected Entity target;
 
-    @Inject(method = "canStart", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "canStart", at = @At("TAIL"), cancellable = true)
     private void injectFieldOfViewCheck(CallbackInfoReturnable<Boolean> cir) {
         if (cir.getReturnValue() != null && cir.getReturnValue()) {
             if(this.target instanceof MobEntity targetEntity) {
                 if (!isInFieldOfView(mob, targetEntity)) {
                     cir.setReturnValue(false);
+
                 }
+
             }
         }
     }
